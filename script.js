@@ -48,6 +48,8 @@ gsap.to('#page2 img',{
 let lt_main = gsap.timeline();
 
 lt_main
+
+.from('nav',{opacity:0,y:30,ease:'none',delay:0.3})
 .from('.page1-header',{opacity:0,y:80,ease:'none'})
 .from('.page1-content',{opacity:0,y:30,ease:'none'},"-=0.2")
 .from('#page2 img',{opacity:0,y:40,ease:'none'},"-=0.3")

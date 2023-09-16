@@ -33,7 +33,7 @@ html,body{
     min-height: 100vh;
     background-color: #232025;
     overflow: hidden;
-    position: relative;
+    
 }
 
 
@@ -51,6 +51,7 @@ nav{
     background-color: transparent;
     position: fixed;
     top: 0;
+    z-index: 1000;
 }
 
 
@@ -61,6 +62,7 @@ nav{
     letter-spacing: 1vw;
     margin-top: 17vh;
 }
+
 
 .page1-header span{
     position: absolute;
@@ -73,11 +75,16 @@ nav{
 nav h4,nav h1{
     font-family: AttilaSan;
     font-weight: 100;
+    cursor: pointer;
 }
 
 .nav-right{
     display: flex;
     gap: 5vw;
+}
+
+.nav-right i{
+    cursor: pointer;
 }
 
 .page1-content{
@@ -199,6 +206,7 @@ nav h4,nav h1{
     gap: 10vw;
     align-items: center;
     padding: 1vw 0;
+    cursor: pointer;
 }
 
 .moving-img{
@@ -402,6 +410,9 @@ nav h4,nav h1{
 
 .part-3-inner-1 h4{
     font-family: StabilGrotesk;
+}
+.part-3-inner-left-effect h4{
+    cursor: pointer;
 }
 .part-3-inner-1 p{
     font-family: domaine;
@@ -635,4 +646,8 @@ nav h4,nav h1{
     font-size: 0.8vw;
     font-family: StabilGrotesk;
     justify-content: flex-end;
+}
+
+#page10 h4{
+    cursor: pointer;
 }

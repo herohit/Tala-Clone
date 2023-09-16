@@ -33,6 +33,7 @@ function loco(){
 
 loco();
 
+
 gsap.to('#page2 img',{
     height:'100vh',
     width:'100%',
@@ -103,19 +104,32 @@ var page3_timeline = gsap.timeline({
       scroller:'#main',
       start:'top 55%',
       end:'top 35%',
-      scrub:1,
+      scrub:5,
   }
 })
 
 
 page3_timeline
 .to('.dotted',{
-  width:'80%',
+  width:'30%',
   opacity:1,
+  duration:5,
+  ease:'none'
+})
+.to('.dotted',{
+  width:'50%',
+  duration:5,
+  ease:'none'
+})
+.to('.dotted',{
+  width:'80%',
+  duration:5,
+  ease:'none'
 })
 .to('.dotted-text',{
   y:-45,
   opacity:1,
+  duration:5
 })
 .from('.page3-row',{opacity:0,delay:3,duration:10})
 

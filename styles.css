@@ -437,7 +437,6 @@ nav h4,nav h1{
 .part-3-inner-img{
     height: 280px;
     width: 280px;
-    background-color: green;
     position: absolute;
     top: 0;
     background-repeat: no-repeat;
@@ -562,6 +561,8 @@ nav h4,nav h1{
     width: 90%;
     background-color: transparent;
     border: none;
+    outline: none;
+    font-size: 2vw;
 }
 
 .page10-input input::placeholder{

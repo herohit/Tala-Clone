@@ -336,23 +336,23 @@ const closeHam = document.querySelector(".close-ham");
 const ham = document.querySelector(".menu-click");
 const links = menu.querySelectorAll('.menu-row a');
 
-var tl = gsap.timeline({ paused: true });
+var menutl = gsap.timeline({ paused: true });
 
-tl.to(menu, {
+menutl.to(menu, {
 	duration: 1,
 	opacity: 1,
 	y: '100%', // change this to 100vh for full-height menu
 	ease: 'expo.inOut',
 })
-tl.from('.menu-title', {
+menutl.from('.menu-title', {
   duration: 0.5,
   opacity: 0,
   y: -20,
 }, "-=0.5")
-tl.to(nav,{
+menutl.to(nav,{
   color:'black',
 },'-=1')
-tl.from(links, {
+menutl.from(links, {
 	duration: 1,
 	opacity: 0,
 	y: 20,
@@ -360,7 +360,7 @@ tl.from(links, {
 	ease: 'expo.inOut',
 }, "-=1");
 
-tl.reverse();
+menutl.reverse();
 
 ham.addEventListener('click', () => {
   navH4.style.opacity=0;
@@ -373,7 +373,7 @@ ham.addEventListener('click', () => {
     display:'block',
     color:'#232025'
   })
-  tl.reversed(false);
+  menutl.reversed(false);
 });
 closeHam.addEventListener('click', () => {
   gsap.to(ham,{
@@ -389,5 +389,28 @@ closeHam.addEventListener('click', () => {
     opacity:1,
     display:'block',
   })
-  tl.reversed(true);
+  menutl.reversed(true);
 });
+
+
+
+const cartBtn = document.querySelector('#cart-btn');
+const cartBtn2 = document.querySelector('#cart-btn2');
+var cartTl = gsap.timeline({ paused: true });
+cartTl.to('.cart-inner',{
+  opacity:1,
+  display:'flex',
+  y:20,
+  ease: 'expo.inOut',
+  height:'280px',
+  duration:1,
+})
+cartTl.reverse();
+cartBtn.addEventListener('click',()=>{
+
+  cartTl.reversed(!cartTl.reversed());
+})
+cartBtn2.addEventListener('click',()=>{
+
+  cartTl.reversed(!cartTl.reversed());
+})

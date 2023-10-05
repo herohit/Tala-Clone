@@ -89,6 +89,58 @@ html,body{
     font-family:StabilGrotesk ;
 }
 
+.cart-inner{
+    height: 260px;
+    width: 320px;
+    background: #e2ddd7;
+    position: absolute;
+    right: 8%;
+    top: 60%;
+    border-radius: 20px;
+    opacity: 0;
+    display: none;
+    flex-direction: column;
+}
+
+.cin h4,.cin i{
+    color: #232025;
+}
+
+.cin i{
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+
+.cart-toggle{
+    display: flex;
+    opacity: 1;
+}
+.cin-one{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 1vw; 
+}
+
+.cin-line{
+    width: 100%;
+    border-bottom:1.5px dotted;
+    height: 1%;
+    color:#232025 ;
+}
+
+
+.cin-two{
+    padding-top: 1vh;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 0.9vw;
+}
 
 #page1{
     height: 70vh;

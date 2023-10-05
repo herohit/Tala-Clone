@@ -26,6 +26,7 @@ html,body{
     height: 100%;
     width: 100%;
     background-color: #232025;
+    position: relative;
 }
 
 #main{
@@ -34,6 +35,58 @@ html,body{
     background-color: #232025;
     overflow: hidden;
     
+}
+
+.menu{
+    background-color: #d5cdc4;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5vw;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    z-index: 9;
+}
+
+.close-ham{
+    display: none;
+}
+.menu-title h1{
+    font-size:13vw;
+    color: rgba(35, 32, 37, 1);
+    font-family: AttilaSan;
+    padding: 5vh 0;
+}
+.menu-row{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 40%;
+    padding-left:2vw ;
+}
+
+.menu-r1m{
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 3vw;
+}
+
+.menu-r1{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 2vh;
+    width: fit-content;
+}
+
+.menu-row a{
+    text-decoration: none;
+    color: rgba(35, 32, 37, 1);
+    font-size: 1.5vw;
+    font-family:StabilGrotesk ;
 }
 
 

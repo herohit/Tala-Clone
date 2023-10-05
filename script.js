@@ -325,3 +325,69 @@ gsap.from(".page9-img", {
     scroller:'#main'
   }
 });
+
+const menubtn= document.querySelector('.menu-click');
+const menu= document.querySelector('.menu');
+const nav= document.querySelector('nav h4');
+const navH4= document.querySelector('.nav-right h4');
+
+
+const closeHam = document.querySelector(".close-ham");
+const ham = document.querySelector(".menu-click");
+const links = menu.querySelectorAll('.menu-row a');
+
+var tl = gsap.timeline({ paused: true });
+
+tl.to(menu, {
+	duration: 1,
+	opacity: 1,
+	y: '100%', // change this to 100vh for full-height menu
+	ease: 'expo.inOut',
+})
+tl.from('.menu-title', {
+  duration: 0.5,
+  opacity: 0,
+  y: -20,
+}, "-=0.5")
+tl.to(nav,{
+  color:'black',
+},'-=1')
+tl.from(links, {
+	duration: 1,
+	opacity: 0,
+	y: 20,
+	stagger: 0.1,
+	ease: 'expo.inOut',
+}, "-=1");
+
+tl.reverse();
+
+ham.addEventListener('click', () => {
+  navH4.style.opacity=0;
+  navH4.style.display='none';
+  ham.style.opacity=0;
+  ham.style.display='none';
+  
+  gsap.to(closeHam,{
+    opacity:1,
+    display:'block',
+    color:'#232025'
+  })
+  tl.reversed(false);
+});
+closeHam.addEventListener('click', () => {
+  gsap.to(ham,{
+    opacity:1,
+    display:'block',
+    
+  })
+  gsap.to(closeHam,{
+    opacity:0,
+    display:'none',
+  })
+    gsap.to(navH4,{
+    opacity:1,
+    display:'block',
+  })
+  tl.reversed(true);
+});
